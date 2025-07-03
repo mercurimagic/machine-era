@@ -1,0 +1,54 @@
+.footer-line {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 2rem;
+    font-size: 0.85rem;
+    background: transparent;
+    backdrop-filter: none;
+    pointer-events: none;
+  }
+  
+  .footer-label,
+  .footer-right {
+    pointer-events: auto;
+    color: #888;
+    align-items: flex-end; /* switch to this from center */
+    gap: 0.4rem;
+    padding-right: 3rem; /* add this for spacing away from edge */
+  }
+  
+  
+  .brand-name {
+    font-family: "giddyup-std", sans-serif;
+    margin-left: 1rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #f60676;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .brand-name:hover {
+    color: #ff69b4;
+    text-shadow: 0 0 5px #ffcaff;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .footer-line {
+      flex-direction: column;
+      text-align: center;
+      gap: 0.75rem;
+      padding: 1rem;
+    }
+  
+    .footer-right {
+      align-items: center;
+    }
+  }
+  

@@ -1,0 +1,63 @@
+.machine-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    padding: 0.5rem 2rem; /* top/bottom, left/right */
+    margin: 0;
+    background: transparent;
+    pointer-events: none;
+    height: auto;
+    overflow: visible;
+  }
+  
+  .glitter-title {
+    font-family: "giddyup-std", sans-serif;
+    font-size: 3rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.2;
+    margin: 0;
+    background: linear-gradient(135deg, #00ff88, #00ff88, #00ff88);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    text-shadow: 0 0 4px #00ff88, 0 0 8px #ccfff9;
+    pointer-events: auto;
+    cursor: default;
+    animation: shimmer 2s infinite, flicker 3s infinite alternate;
+  }
+  .glitter-title:hover {
+    animation: shimmer 1.2s infinite ease-in-out, flicker 1.5s infinite alternate;
+    text-shadow: 
+      0 0 6px #00ffcc,
+      0 0 12px #ccfff9,
+      0 0 20px #18e31e;
+    filter: brightness(1.2);
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  @keyframes shimmer {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  @keyframes flicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+      opacity: 1;
+     
+    }
+    20%, 22%, 24%, 55% {
+      opacity: 0.4;
+      text-shadow: none;
+    }
+  }
+  
